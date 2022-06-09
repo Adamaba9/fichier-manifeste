@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: configMap
+metadata:
+  name: elhadjiba-dev
+  labels:
+    app: httpd
+spec:
+  containers:
+    - name: httpd
+      image: 'image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest'
+      ports:
+        - containerPort: 8080

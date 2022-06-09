@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: catalogue-dsi
+  namespace: elhadjiba-stage
+  labels:
+    app: catalogue-dsi
+spec:
+ # host: catalogue-dsi-elhadjiba-stage.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+  to:
+    kind: Service
+    name: catalogue-dsi
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: elhadjiba-stage
+  labels:
+    app: catalogue-dsi
+spec:
+  containers:
+    - name: catalogue-dsi
+      image: 'freemanpolys/catalogue-dsi:latest'
+      ports:
+        - containerPort: 8080
